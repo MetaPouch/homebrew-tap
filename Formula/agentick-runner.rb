@@ -9,15 +9,21 @@
 # the product on their own Mac, who will not wait for a change-management
 # ticket to do it. `install.sh` is the third, for people who want neither.
 class AgentickRunner < Formula
-  desc "Agentick runner — executes agent work on your own hardware"
+  # Not starting with the formula's own name, and no trailing period: both are
+  # `brew audit --strict` rules, and a formula that fails audit is one no
+  # reviewer will take seriously.
+  desc "Executes agent work on hardware you own"
   homepage "https://workspace.agentick.xyz"
   url "https://github.com/MetaPouch/agentick-runner-releases/releases/download/v0.1.0/agentick-runner-macos-arm64.tar.gz"
   sha256 "15b31c60bf66f28f419988e0cb82cd5a10c516a206fb558ffd4da1c45d4ea97b"
   license :cannot_represent
-  version "0.1.0"
 
-  depends_on :macos
+  # No `version` stanza: brew scans it from the URL, and declaring it as well is
+  # redundant — audit flags it, and the two could disagree.
+  #
+  # arch before macos, also an audit rule.
   depends_on arch: :arm64
+  depends_on :macos
 
   def install
     bin.install "agentick-runner"
