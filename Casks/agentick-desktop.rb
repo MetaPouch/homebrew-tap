@@ -17,7 +17,7 @@ cask "agentick-desktop" do
 
   # arch before macos, also an audit rule.
   depends_on arch: :arm64
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Agentick.app"
 
