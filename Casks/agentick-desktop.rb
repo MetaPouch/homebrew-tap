@@ -5,8 +5,8 @@
 # is what gets committed to the tap. Editing the checksum here by hand is how
 # a cask ends up pointing confidently at the wrong bytes.
 cask "agentick-desktop" do
-  version "0.1.16"
-  sha256 "ccc8b04557394a60b6137f7f27295413ca74720f8941eefd484160a2e10f6b5f"
+  version "0.1.17"
+  sha256 "3a7988b2be6e06ea32ecd411c88c6433e14c063389ae53d01599fbe78f79d492"
 
   url "https://github.com/MetaPouch/agentick-desktop-releases/releases/download/v#{version}/Agentick-#{version}-arm64.dmg"
   name "Agentick"
@@ -14,6 +14,12 @@ cask "agentick-desktop" do
   # --strict` rules, same as the runner's formula.
   desc "The Agentick runner as a desktop app"
   homepage "https://workspace.agentick.xyz"
+
+  # The app updates itself from the same releases (AGN-346), so the version
+  # brew recorded at install goes stale by design. Without this, `brew
+  # upgrade` would reinstall over a newer self-updated app, or downgrade it
+  # while the tap lags a release. `brew upgrade --greedy` still upgrades it.
+  auto_updates true
 
   # arch before macos, also an audit rule.
   depends_on arch: :arm64
