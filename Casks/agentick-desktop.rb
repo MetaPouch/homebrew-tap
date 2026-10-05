@@ -5,8 +5,8 @@
 # is what gets committed to the tap. Editing the checksum here by hand is how
 # a cask ends up pointing confidently at the wrong bytes.
 cask "agentick-desktop" do
-  version "0.1.21"
-  sha256 "168717bc712318c32eaf3abfcec6a5adc3fd01f0f0a6bc408a67488a384924e3"
+  version "0.1.22"
+  sha256 "370ba9d24fea0569222358e142ff8a2ce995f4f8669d4ef154cda1de36fb14b4"
 
   url "https://github.com/MetaPouch/agentick-desktop-releases/releases/download/v#{version}/Agentick-#{version}-arm64.dmg"
   name "Agentick"
