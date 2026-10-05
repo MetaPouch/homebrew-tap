@@ -5,15 +5,15 @@
 # is what gets committed to the tap. Editing the checksum here by hand is how
 # a cask ends up pointing confidently at the wrong bytes.
 cask "agentick-desktop" do
-  version "0.1.23"
-  sha256 "735ca5f567263200dd59c5289cfdee4bd680cd3ad6d8766a11020dae77581814"
+  version "0.1.24"
+  sha256 "9957859c3a3022c9a1b39bac118acf048681caf9f298ffd5f95d9e6318fd707b"
 
   url "https://github.com/MetaPouch/agentick-desktop-releases/releases/download/v#{version}/Agentick-#{version}-arm64.dmg"
   name "Agentick"
   # No trailing period, no repeating the cask's own name — `brew audit
   # --strict` rules, same as the runner's formula.
   desc "The Agentick runner as a desktop app"
-  homepage "https://workspace.agentick.xyz"
+  homepage "https://console.agentick.xyz"
 
   # The app updates itself from the same releases (AGN-346), so the version
   # brew recorded at install goes stale by design. Without this, `brew
