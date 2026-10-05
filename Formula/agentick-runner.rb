@@ -14,9 +14,9 @@ class AgentickRunner < Formula
   # `brew audit --strict` rules, and a formula that fails audit is one no
   # reviewer will take seriously.
   desc "Executes agent work on hardware you own"
-  homepage "https://workspace.agentick.xyz"
-  url "https://github.com/MetaPouch/agentick-runner-releases/releases/download/v0.2.17/agentick-runner-macos-arm64.tar.gz"
-  sha256 "48094c1f79728df551d399489cd19bb41bf4ddebd6a4d4705c79b5ad9428982e"
+  homepage "https://console.agentick.xyz"
+  url "https://github.com/MetaPouch/agentick-runner-releases/releases/download/v0.2.18/agentick-runner-macos-arm64.tar.gz"
+  sha256 "dec9eeab7f043a11a357054eda6f3f6df5184e6e6f59be00420fb01934892095"
   license :cannot_represent
 
   # No `version` stanza: brew scans it from the URL, and declaring it as well is
@@ -41,9 +41,9 @@ class AgentickRunner < Formula
       FileVault machine it stays down until a human unlocks the Mac.
 
       Next:
-        agentick-runner enroll --url https://workspace.agentick.xyz --token agrt_...
+        agentick-runner enroll --url https://api.console.agentick.xyz --token agrt_...
         pbpaste | agentick-runner set-key
-        agentick-runner install-agent --url https://workspace.agentick.xyz
+        agentick-runner install-agent --url https://api.console.agentick.xyz
 
       Homebrew installs unprivileged, so per-step user isolation is not set up
       on this path. Run `agentick-runner provision-users` and follow its output
