@@ -15,8 +15,8 @@ class AgentickRunner < Formula
   # reviewer will take seriously.
   desc "Executes agent work on hardware you own"
   homepage "https://console.agentick.xyz"
-  url "https://github.com/MetaPouch/agentick-runner-releases/releases/download/v0.2.24/agentick-runner-macos-arm64.tar.gz"
-  sha256 "427255f3b4a77fd3dc8c5a16e61d2a91afac275a1ff37d9d09477670d48e2552"
+  url "https://github.com/MetaPouch/agentick-runner-releases/releases/download/v0.2.25/agentick-runner-macos-arm64.tar.gz"
+  sha256 "ee480504a56a250dbd46039d783e212d72095d61519b2e02db39491b6039370a"
   license :cannot_represent
 
   # No `version` stanza: brew scans it from the URL, and declaring it as well is
